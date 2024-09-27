@@ -1,0 +1,97 @@
+.gradient {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(40deg, #6C00A2, #001152);
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient svg {
+  display: none;
+}
+
+.blobsContainer {
+  width: 100%;
+  height: 100%;
+  filter: url(#svgFilter1) blur(40px);
+}
+
+.blobsContainer div {
+  position: absolute;
+  mix-blend-mode: hard-light;
+}
+
+.blob1, .blob2, .blob3, .blob4 {
+  width: 80%;
+  height: 80%;
+}
+
+.blob1 {
+  background: radial-gradient(circle at center, #1271FFCC 0, #1271FF00 50%) no-repeat;
+  top: 10%;
+  left: 10%;
+  transform-origin: center center;
+  animation: moveVertical 30s ease infinite;
+}
+
+.blob2 {
+  background: radial-gradient(circle at center, #DD4AFFCC 0, #DD4AFF00 50%) no-repeat;
+  top: 10%;
+  left: 10%;
+  transform-origin: calc(50% - 400px);
+  animation: moveInCircle 20s reverse infinite;
+}
+
+.blob3 {
+  background: radial-gradient(circle at center, #64DCFFCC 0, #64DCFF00 50%) no-repeat;
+  top: calc(10% + 200px);
+  left: calc(10% - 500px);
+  transform-origin: calc(50% + 400px);
+  animation: moveInCircle 40s linear infinite;
+}
+
+.blob4 {
+  background: radial-gradient(circle at center, #C83232CC 0, #C8323200 50%) no-repeat;
+  top: 10%;
+  left: 10%;
+  transform-origin: calc(50% - 200px);
+  animation: moveHorizontal 40s ease infinite;
+  opacity: 0.7;
+}
+
+.blob5 {
+  background: radial-gradient(circle at center, #B4B432CC 0, #B4B43200 50%) no-repeat;
+  width: 160%;
+  height: 160%;
+  top: -30%;
+  left: -30%;
+  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  animation: moveInCircle 20s ease infinite;
+}
+
+.cursorBlob {
+  background: radial-gradient(circle at center, #8C64FFCC 0, #8C64FF00 50%) no-repeat;
+  width: 100%;
+  height: 100%;
+  top: -50%;
+  left: -50%;
+  opacity: 0.7;
+}
+
+@keyframes moveInCircle {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes moveVertical {
+  0% { transform: translateY(-50%); }
+  50% { transform: translateY(50%); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes moveHorizontal {
+  0% { transform: translateX(-50%) translateY(-10%); }
+  50% { transform: translateX(50%) translateY(10%); }
+  100% { transform: translateX(-50%) translateY(-10%); }
+}

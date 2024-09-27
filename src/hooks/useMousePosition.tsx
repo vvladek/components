@@ -1,17 +1,22 @@
 "use client"
 
-import { CounterContext } from "@/context/CounterContext"
-import { useContext, useEffect } from "react"
+import { useEffect, useState } from "react"
+
+
+
+interface MousePosition { x: number; y: number; }
 
 
 
 export function useMousePosition () {
 
-  const { counter, setCounter } = useContext(CounterContext)
+  const [position, setPosition] = useState<MousePosition>({ x: 0, y: 0 })
+
 
   function handleMouseMove (event: MouseEvent): void {
-    setCounter(() => event.clientX)
+    setPosition({ x: event.clientX, y: event.clientY })
   }
+
 
   useEffect(() => {
     window.addEventListener("mousemove", handleMouseMove)
@@ -19,5 +24,5 @@ export function useMousePosition () {
   }, [])
 
 
-  return null
+  return position
 }
