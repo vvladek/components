@@ -13,7 +13,7 @@
 .blobsContainer {
   width: 100%;
   height: 100%;
-  filter: url(#svgFilter1) blur(40px);
+  filter: url(#svgFilter1) blur(50px);
 }
 
 .blobsContainer div {
@@ -27,7 +27,7 @@
 }
 
 .blob1 {
-  background: radial-gradient(circle at center, #1271FFCC 0, #1271FF00 50%) no-repeat;
+  background: radial-gradient(circle at center, #1271FFCC 0, transparent 50%) no-repeat;
   top: 10%;
   left: 10%;
   transform-origin: center center;
@@ -35,7 +35,7 @@
 }
 
 .blob2 {
-  background: radial-gradient(circle at center, #DD4AFFCC 0, #DD4AFF00 50%) no-repeat;
+  background: radial-gradient(circle at center, #DD4AFFCC 0, transparent 50%) no-repeat;
   top: 10%;
   left: 10%;
   transform-origin: calc(50% - 400px);
@@ -43,7 +43,7 @@
 }
 
 .blob3 {
-  background: radial-gradient(circle at center, #64DCFFCC 0, #64DCFF00 50%) no-repeat;
+  background: radial-gradient(circle at center, #64DCFFCC 0, transparent 50%) no-repeat;
   top: calc(10% + 200px);
   left: calc(10% - 500px);
   transform-origin: calc(50% + 400px);
@@ -51,7 +51,7 @@
 }
 
 .blob4 {
-  background: radial-gradient(circle at center, #C83232CC 0, #C8323200 50%) no-repeat;
+  background: radial-gradient(circle at center, #C83232CC 0, transparent 50%) no-repeat;
   top: 10%;
   left: 10%;
   transform-origin: calc(50% - 200px);
@@ -60,7 +60,7 @@
 }
 
 .blob5 {
-  background: radial-gradient(circle at center, #B4B432CC 0, #B4B43200 50%) no-repeat;
+  background: radial-gradient(circle at center, #B4B432CC 0, transparent 50%) no-repeat;
   width: 160%;
   height: 160%;
   top: -30%;
@@ -70,7 +70,7 @@
 }
 
 .cursorBlob {
-  background: radial-gradient(circle at center, #8C64FFCC 0, #8C64FF00 50%) no-repeat;
+  background: radial-gradient(circle at center, #8C64FFCC 0, transparent 50%) no-repeat;
   width: 100%;
   height: 100%;
   top: -50%;
