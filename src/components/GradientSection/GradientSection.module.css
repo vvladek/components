@@ -1,9 +1,9 @@
 .gradient {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(40deg, #6C00A2, #001152);
-  position: relative;
+  background: linear-gradient(150deg, #430069, #080020);
   overflow: hidden;
+  position: relative;
 }
 
 .gradient svg {
@@ -27,7 +27,7 @@
 }
 
 .blob1 {
-  background: radial-gradient(circle at center, #1271FFCC 0, transparent 50%) no-repeat;
+  background: radial-gradient(circle at center, #1271FFCC 0, transparent 50%);
   top: 10%;
   left: 10%;
   transform-origin: center center;
@@ -35,7 +35,7 @@
 }
 
 .blob2 {
-  background: radial-gradient(circle at center, #DD4AFFCC 0, transparent 50%) no-repeat;
+  background: radial-gradient(circle at center, #DD4AFFCC 0, transparent 50%);
   top: 10%;
   left: 10%;
   transform-origin: calc(50% - 400px);
@@ -43,7 +43,7 @@
 }
 
 .blob3 {
-  background: radial-gradient(circle at center, #64DCFFCC 0, transparent 50%) no-repeat;
+  background: radial-gradient(circle at center, #64DCFFCC 0, transparent 50%);
   top: calc(10% + 200px);
   left: calc(10% - 500px);
   transform-origin: calc(50% + 400px);
@@ -51,7 +51,7 @@
 }
 
 .blob4 {
-  background: radial-gradient(circle at center, #C83232CC 0, transparent 50%) no-repeat;
+  background: radial-gradient(circle at center, #C83232CC 0, transparent 50%);
   top: 10%;
   left: 10%;
   transform-origin: calc(50% - 200px);
@@ -60,7 +60,7 @@
 }
 
 .blob5 {
-  background: radial-gradient(circle at center, #B4B432CC 0, transparent 50%) no-repeat;
+  background: radial-gradient(circle at center, #B4B432CC 0, transparent 50%);
   width: 160%;
   height: 160%;
   top: -30%;
@@ -70,12 +70,17 @@
 }
 
 .cursorBlob {
-  background: radial-gradient(circle at center, #8C64FFCC 0, transparent 50%) no-repeat;
+  background: radial-gradient(circle at center, #8C64FF 0, transparent 25%);
   width: 100%;
   height: 100%;
-  top: -50%;
-  left: -50%;
-  opacity: 0.7;
+  opacity: 0.75;
+  scale: 1.25 1;
+  animation: animateCursorBlob 3s linear infinite;
+}
+
+@keyframes animateCursorBlob {
+  0% { scale: 1.25 1; }
+  50% { scale: 1 1.25; }
 }
 
 @keyframes moveInCircle {

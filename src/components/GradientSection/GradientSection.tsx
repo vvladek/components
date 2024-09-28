@@ -1,7 +1,7 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react";
-import { useMousePosition } from "@/hooks/useMousePosition";
+import { useEffect, useRef, useState } from "react"
+import { useMousePosition } from "@/hooks/useMousePosition"
 import style from "./GradientSection.module.css"
 
 
@@ -45,7 +45,7 @@ export function GradientSection () {
         <div className={style.blob3}></div>
         <div className={style.blob4}></div>
         <div className={style.blob5}></div>
-        <div className={style.cursorBlob} style={{ transform: `translate(${cursorPos.x}px, ${cursorPos.y}px)` }}></div>
+        <div className={style.cursorBlob} style={{ top: `calc(-50% + ${cursorPos.y}px)`, left: `calc(-50% + ${cursorPos.x}px)` }}></div>
       </div>
     </section>
   )
