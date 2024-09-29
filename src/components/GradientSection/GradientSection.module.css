@@ -1,9 +1,23 @@
 .gradient {
+  display: grid;
+  place-content: center;
   width: 100%;
   height: 100vh;
   background: linear-gradient(150deg, #430069, #080020);
   overflow: hidden;
   position: relative;
+}
+
+.gradient h1 {
+  padding: 60px 120px;
+  background: #00000040;
+  border: 5px solid #FFFFFF;
+  border-radius: 30px;
+  color: #FFFFFF;
+  font-size: 8vw;
+  z-index: 100;
+  text-shadow: 0 0 2vw #00000080;
+  user-select: none;
 }
 
 .gradient svg {
@@ -13,21 +27,20 @@
 .blobsContainer {
   width: 100%;
   height: 100%;
-  filter: url(#svgFilter1) blur(50px);
+  filter: url(#svgFilter1) blur(40px);
+  position: absolute;
+  top: 0;
 }
 
 .blobsContainer div {
+  width: 80%;
+  height: 80%;
   position: absolute;
   mix-blend-mode: hard-light;
 }
 
-.blob1, .blob2, .blob3, .blob4 {
-  width: 80%;
-  height: 80%;
-}
-
 .blob1 {
-  background: radial-gradient(circle at center, #1271FFCC 0, transparent 50%);
+  background: radial-gradient(circle at center, #216FFFCC 0, transparent 50%);
   top: 10%;
   left: 10%;
   transform-origin: center center;
@@ -35,7 +48,7 @@
 }
 
 .blob2 {
-  background: radial-gradient(circle at center, #DD4AFFCC 0, transparent 50%);
+  background: radial-gradient(circle at center, #D050FFCC 0, transparent 50%);
   top: 10%;
   left: 10%;
   transform-origin: calc(50% - 400px);
@@ -43,7 +56,7 @@
 }
 
 .blob3 {
-  background: radial-gradient(circle at center, #64DCFFCC 0, transparent 50%);
+  background: radial-gradient(circle at center, #64D3FFCC 0, transparent 50%);
   top: calc(10% + 200px);
   left: calc(10% - 500px);
   transform-origin: calc(50% + 400px);
@@ -51,7 +64,7 @@
 }
 
 .blob4 {
-  background: radial-gradient(circle at center, #C83232CC 0, transparent 50%);
+  background: radial-gradient(circle at center, #FF66CCCC 0, transparent 50%);
   top: 10%;
   left: 10%;
   transform-origin: calc(50% - 200px);
@@ -59,8 +72,8 @@
   opacity: 0.7;
 }
 
-.blob5 {
-  background: radial-gradient(circle at center, #B4B432CC 0, transparent 50%);
+.blobsContainer .blob5 {
+  background: radial-gradient(circle at center, #32FFDDCC 0, transparent 50%);
   width: 160%;
   height: 160%;
   top: -30%;
@@ -70,17 +83,15 @@
 }
 
 .cursorBlob {
-  background: radial-gradient(circle at center, #8C64FF 0, transparent 25%);
-  width: 100%;
-  height: 100%;
-  opacity: 0.75;
-  scale: 1.25 1;
-  animation: animateCursorBlob 3s linear infinite;
+  background: radial-gradient(circle at center, #7364FFCC 0, transparent 50%);
+  opacity: 0.7;
+  scale: 1.3 1;
+  animation: animateCursorBlob 2s linear infinite;
 }
 
 @keyframes animateCursorBlob {
-  0% { scale: 1.25 1; }
-  50% { scale: 1 1.25; }
+  0% { scale: 1.3 1; }
+  50% { scale: 1 1.3; }
 }
 
 @keyframes moveInCircle {

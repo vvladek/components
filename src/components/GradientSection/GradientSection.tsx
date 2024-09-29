@@ -10,12 +10,12 @@ import style from "./GradientSection.module.css"
 export function GradientSection () {
 
   const requestAnimationFrameRef = useRef(0)
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
+  const [curPos, setCurPos] = useState({ x: 0, y: 0 })
   const mousePosition = useMousePosition()
 
 
   function moveCursorBlob (): void {
-    setCursorPos(prev => ({
+    setCurPos(prev => ({
       x: Math.round(prev.x + (mousePosition.x - prev.x) / 20),
       y: Math.round(prev.y + (mousePosition.y - prev.y) / 20)
     }))
@@ -30,6 +30,7 @@ export function GradientSection () {
 
   return(
     <section className={style.gradient}>
+      <h1>HELLO WORLD</h1>
       <svg>
         <defs>
           <filter id="svgFilter1">
@@ -45,7 +46,7 @@ export function GradientSection () {
         <div className={style.blob3}></div>
         <div className={style.blob4}></div>
         <div className={style.blob5}></div>
-        <div className={style.cursorBlob} style={{ top: `calc(-50% + ${cursorPos.y}px)`, left: `calc(-50% + ${cursorPos.x}px)` }}></div>
+        <div className={style.cursorBlob} style={{ top:`calc(-40% + ${curPos.y}px)`, left:`calc(-40% + ${curPos.x}px)` }}></div>
       </div>
     </section>
   )
