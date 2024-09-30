@@ -9,6 +9,7 @@
 .gradient h1 {
   color: #FFFFFF;
   font-size: 8vw;
+  text-align: center;
   z-index: 100;
   text-shadow: 0 0 2vw #00000080;
   user-select: none;

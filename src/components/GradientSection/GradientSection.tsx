@@ -31,7 +31,7 @@ export function GradientSection () {
   return(
     <section className={style.gradient}>
 
-      <h1>HELLO WORLD</h1>
+      <h1>GRADIENT<br/>SECTION</h1>
 
       <svg>
         <defs>
