@@ -4,8 +4,6 @@
   width: 100%;
   height: 100vh;
   background: linear-gradient(150deg, #380058, #080020);
-  overflow: hidden;
-  position: relative;
 }
 
 .gradient h1 {
@@ -23,9 +21,11 @@
 .blobsContainer {
   width: 100%;
   height: 100%;
-  filter: url(#svgFilter1) blur(40px);
+  filter: url(#gradientSectionSvgFilter) blur(40px);
   position: absolute;
   top: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 .blobsContainer div {
@@ -39,7 +39,6 @@
   background: radial-gradient(circle at center, #2480DCCC 0, transparent 50%);
   top: 10%;
   left: 10%;
-  transform-origin: center center;
   animation: moveVertical 30s ease infinite;
 }
 
@@ -47,15 +46,15 @@
   background: radial-gradient(circle at center, #FF55CCCC 0, transparent 50%);
   top: 10%;
   left: 10%;
-  transform-origin: calc(50% - 400px);
+  transform-origin: 20%;
   animation: moveInCircle 20s reverse infinite;
 }
 
 .blob3 {
   background: radial-gradient(circle at center, #9EE8FFCC 0, transparent 50%);
-  top: calc(10% + 200px);
-  left: calc(10% - 500px);
-  transform-origin: calc(50% + 400px);
+  top: 35%;
+  left: -25%;
+  transform-origin: 80%;
   animation: moveInCircle 40s linear infinite;
 }
 
@@ -63,7 +62,7 @@
   background: radial-gradient(circle at center, #CE4B79CC 0, transparent 50%);
   top: 10%;
   left: 10%;
-  transform-origin: calc(50% - 200px);
+  transform-origin: 35%;
   animation: moveHorizontal 40s ease infinite;
   opacity: 0.7;
 }
@@ -74,7 +73,7 @@
   height: 160%;
   top: -30%;
   left: -30%;
-  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  transform-origin: -15% 65%;
   animation: moveInCircle 20s ease infinite;
 }
 
